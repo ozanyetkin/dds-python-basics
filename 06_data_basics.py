@@ -1,12 +1,15 @@
 import pandas as pd
 
-df = pd.DataFrame(
-    {
-        "Name": ["Alice", "Bob", "Charlie", "David", "Eve"],
-        "Age": [25, None, 35, 45, 20],
-        "Gender": ["F", "M", "M", "M", "F"],
-        "Income": [50000, 60000, None, 80000, 55000],
-        "Country": ["US", "UK", "UK", "US", "US"],
-        "Purchased": ["Yes", "No", "Yes", "No", "Yes"],
-    }
-)
+# Read from CSV
+df = pd.read_csv("data.csv")
+
+# Drop the name column
+df = df.drop(columns=["Name"])
+
+# Fill the missing value in age with the median
+df["Age"] = df["Age"].fillna(df["Age"].median())
+
+# Fill the missing value in income with the mean
+df["Income"] = df["Income"].fillna(df["Income"].mean())
+
+print(df)

@@ -1,0 +1,6 @@
+Name,Age,Gender,Income,Country,Purchased
+Alice,25.0,F,50000.0,US,Yes
+Bob,,M,60000.0,UK,No
+Charlie,35.0,M,,UK,Yes
+David,45.0,M,80000.0,US,No
+Eve,20.0,F,55000.0,US,Yes
