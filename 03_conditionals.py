@@ -3,12 +3,13 @@ user_input = input("Please enter a character: ")
 # Then I will define the digits from 0 to 9.
 digits = "0123456789"
 # If the user input is a digit, I will print "You entered a digit."
-if user_input in digits:
-    print("You entered a number.")
-    user_input = int(user_input)
-# Otherwise, I will print "You did not enter a digit."
-else:
-    print("You did not enter a number.")
+for u_input in user_input:
+    if u_input in digits:
+        print("You entered a number.")
+        user_input = int(user_input)
+    # Otherwise, I will print "You did not enter a digit."
+    else:
+        print("You did not enter a number.")
 
 # Now I will check if the user input is an integer.
 if (type(user_input) is int):
